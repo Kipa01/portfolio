@@ -1,0 +1,23 @@
+.scrollbar{
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	height: 100%;
+	&__track{
+		position: relative;
+		width: 7px;
+		height: 0%;
+		background: #64ffdb8e;
+		border-radius: 10px;
+	}
+	&__shadow {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 7px;
+		height: 0%;
+		background: #64ffdb8e;
+		border-radius: 10px;
+		filter: blur(6px);
+	}
+}

@@ -1,0 +1,151 @@
+.projects {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	&__title {
+		margin-bottom: 70px;
+		span {
+			&::before{
+				bottom: -15px;				
+			}
+		}
+	}
+	&__body {
+		.swiper-wrapper {
+			padding: 30px 0;
+		}
+		.swiper-slide {
+			height: auto;
+		}
+	}
+}
+
+.item-projects {
+	flex: 0 0 25%;
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	border-radius: 12px;
+	background-color: rgb(4, 23, 51);
+	overflow: hidden;
+	position: relative;
+	transition: 0.3s ease-in-out;
+	&.swiper-slide-active {
+		@media (any-hover: hover) {
+			&:hover{
+				box-shadow: 0px 1px 2px 0px rgba(0,255,255,0.1),
+					1px 2px 4px 0px rgba(0,255,255,0.1),
+					2px 4px 8px 0px rgba(0,255,255,0.1),
+					2px 4px 16px 0px rgba(0,255,255,0.1);
+				.item-projects {
+					&__info {
+						transform: translate(0,-20%);
+					}
+					&__img {
+						&--background {
+							height: 100%;
+						}
+					}
+					&__hover {
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+	&:not(.swiper-slide-active) {
+		opacity: 0.6;
+	}
+	&__img {
+		width: 100%;
+		height: 235px;
+		position: relative;
+		transition: 0.3s ease-in-out;
+		img {
+			position: absolute;
+			left: 50%;
+			top: 0;
+			transform: translate(-50%,0);
+			object-fit: cover;
+			height: 100%;
+			min-width: 100%;
+		}
+		&--background {
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+	}
+	&__info {
+		flex: 1 1 auto;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 25px;
+		position: relative;
+		z-index: 2;
+		font-family: 'Open Sans';
+		transition: 0.3s ease-in-out;
+	}
+	&__title {
+		font-weight: 700;
+		font-size: 20px;
+		color: $green;
+		margin-bottom: 10px;
+		padding-bottom: 5px;
+		border-bottom: 2px solid $green;;
+	}
+	&__description {
+		font-size: 16px;
+		line-height: 1.5;
+		color: $slate;
+		margin-bottom: 25px;
+	}
+}
+
+.stack-item-projects {
+	&__list {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 15px;
+	}
+	&__item {
+		font-weight: 700;
+		color: $slate;
+	}
+}
+
+.hover-item-projects {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	background-color: rgba(4, 23, 51, 0.9);
+	transition: 0.3s ease-in-out;
+	&__body {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		column-gap: 20px;
+		padding: 20px 20px 0 0;
+	}
+	&__link {
+		flex: 0 0 20px;
+		@media (any-hover: hover){
+			&:hover{
+				path, line, polyline {
+					stroke: $green;
+				}
+			}
+		}
+		path, line, polyline {
+			transition: 0.2s linear;
+		}
+	}
+}

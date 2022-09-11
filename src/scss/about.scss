@@ -1,0 +1,61 @@
+.about {
+	&__container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		min-height: 100vh;
+	}
+}
+
+.about-title {
+	display: flex;
+	justify-content: center;
+	span {
+		&::before {
+			bottom: -25px;
+		}
+	}
+}
+
+.body-about {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 50%;
+	margin: 100px auto 0;
+	column-gap: 50px;
+	&__col {
+		flex: 0 0 50%;
+	}
+	&__title {
+		font-family: 'Open Sans';
+		font-size: 30px;
+		font-weight: 700;
+		color: #fff;
+		line-height: 1.2;
+		text-align: right;
+		letter-spacing: 1px;
+	}
+	&__paragraph {
+		font-family: 'Open Sans';
+		font-size: 16px;
+		color: $slate;
+		line-height: 1.4;
+		letter-spacing: 1px;
+		&:not(:last-child) {
+			margin-bottom: 15px;	
+		}
+		button {
+			font-family: 'Open Sans';
+			cursor: pointer;
+			color: $green;
+			transition: 0.2s linear;
+			@media (any-hover: hover) {
+				&:hover{
+					text-shadow: 0 0 10px $green;
+				}
+			}
+		}
+	}
+}
