@@ -1,6 +1,15 @@
 .title {
 	font-size: 80px;
 	color: $blue;
+	@media (max-width:$pc){
+		font-size: 50px; 
+	}
+	@media (max-width:$tabletSmall){
+		font-size: 40px;
+	}
+	@media (max-width:$mobile){
+		font-size: 35px; 
+	}
 	span {
 		position: relative;
 		&::before {
@@ -25,6 +34,12 @@
 	border: 1px solid $slate;
 	cursor: pointer;
 	transition: 0.2s linear 0.8s;
+	@media (max-width:$pc){
+		font-size: 14px; 
+	}
+	@media (max-width:$tabletSmall){
+		font-size: 12px;
+	}
 	&:before, &:after {
 		content:'';
 		display: inline-block;
@@ -52,6 +67,12 @@
 		font-weight: 900;
 		pointer-events: none;
 		transition: 0.2s linear;
+		@media (max-width:$pc){
+			font-weight: 700; 
+		}
+		@media (max-width:$tabletSmall){
+			font-weight: 500;
+		}
 		&:before, &:after {
 			content:'';
 			display: inline-block;
@@ -94,7 +115,7 @@
 			}
 		}
 	}
-	&:focus {
+	&:focus, &:active {
 		box-shadow: 0 0 20px $greenTint, 0 0 40px $greenTint, 0 0 60px $greenTint, 0 0 80px $greenTint;
 		outline: none;
 		&::before {

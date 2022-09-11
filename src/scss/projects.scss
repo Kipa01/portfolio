@@ -6,6 +6,15 @@
 	min-height: 100vh;
 	&__title {
 		margin-bottom: 70px;
+		@media (max-width:$tablet){
+			margin-bottom: 50px;
+		}
+		@media (max-width:$tabletSmall){
+			margin-bottom: 40px;
+		}
+		@media (max-width:$mobile){
+			margin-bottom: 30px; 
+		}
 		span {
 			&::before{
 				bottom: -15px;				
@@ -32,25 +41,38 @@
 	overflow: hidden;
 	position: relative;
 	transition: 0.3s ease-in-out;
+	@media (max-width:$main){
+		flex: 0 0 30%; 
+	}
+	@media (max-width:$pc){
+		flex: 0 0 40%; 
+	}
+	@media (max-width:$tabletSmall){
+		flex: 0 0 50%;
+	}
+	@media (max-width:$mobile){
+		flex: 0 0 70%; 
+	}
+	@media (max-width: 600px){
+		flex: 0 0 100%;
+	}
 	&.swiper-slide-active {
-		@media (any-hover: hover) {
-			&:hover{
-				box-shadow: 0px 1px 2px 0px rgba(0,255,255,0.1),
-					1px 2px 4px 0px rgba(0,255,255,0.1),
-					2px 4px 8px 0px rgba(0,255,255,0.1),
-					2px 4px 16px 0px rgba(0,255,255,0.1);
-				.item-projects {
-					&__info {
-						transform: translate(0,-20%);
+		&:hover, &:active, &:focus{
+			box-shadow: 0px 1px 2px 0px rgba(0,255,255,0.1),
+				1px 2px 4px 0px rgba(0,255,255,0.1),
+				2px 4px 8px 0px rgba(0,255,255,0.1),
+				2px 4px 16px 0px rgba(0,255,255,0.1);
+			.item-projects {
+				&__info {
+					transform: translate(0,-20%);
+				}
+				&__img {
+					&--background {
+						height: 100%;
 					}
-					&__img {
-						&--background {
-							height: 100%;
-						}
-					}
-					&__hover {
-						opacity: 1;
-					}
+				}
+				&__hover {
+					opacity: 1;
 				}
 			}
 		}
@@ -142,6 +164,11 @@
 				path, line, polyline {
 					stroke: $green;
 				}
+			}
+		}
+		&:active, &:focus {
+			path, line, polyline {
+				stroke: $green;
 			}
 		}
 		path, line, polyline {

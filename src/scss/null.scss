@@ -3,19 +3,23 @@
 	margin: 0;
 	border: 0;
 }
+
 *,
 *:before,
 *:after {
 	box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+	width: 0px;
+	background: transparent;
+}
+
 html,
 body {
 	min-width: $minWidth + px;
-	::-webkit-scrollbar {
-		width: 0px;
-  }
 }
+
 body {
 	color: $slate;
 	line-height: 1;
@@ -23,7 +27,6 @@ body {
 	font-size: $fontSize;
 	background-color: $navy;
 	position: relative;
-	padding-top: 100px;
 }
 input,
 button,
