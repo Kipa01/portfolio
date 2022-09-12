@@ -96,6 +96,8 @@
 	width: 15px;
 	cursor: pointer;
 	outline-color: $green;
+	opacity: 0;
+	animation: fadeIn 3s linear  1s forwards;
 	@media (max-width:$pc){
 		margin-top: 30px;
 	}
@@ -117,6 +119,15 @@
 		path {
 			fill: $green;
 		}
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
 	}
 }
 

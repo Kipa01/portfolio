@@ -69,6 +69,7 @@
 	},
 	"dependencies": {
 		"TagCloud": "^2.2.0",
+		"aos": "^2.3.4",
 		"simplebar": "latest",
 		"three": "^0.144.0"
 	}
