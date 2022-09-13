@@ -1,5 +1,4 @@
 import * as THREE from 'three';
-
 const shader = {
 	vertex: `void main() {
         gl_Position = vec4( position, 1.0 );
@@ -105,7 +104,6 @@ loader.load(
 		animate();
 	}
 );
-
 function init() {
 	container = document.getElementById('bg-24');
 

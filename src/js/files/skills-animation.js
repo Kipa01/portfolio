@@ -20,7 +20,3 @@ window.onload = function () {
 		document.getElementById('skills__animation').style.display = 'none';
 	}
 };
-
-const skillsContainer = document.querySelector('.skills__container');
-const skillsBody = document.querySelector('.skills__body');
-const skillsCanvas = document.querySelector('#skillsCanvas');

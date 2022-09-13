@@ -1,0 +1,49 @@
+.preloader {
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 10000;
+	width: 100%;
+	height: 100vh;
+	background-color: $navy;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.2s linear;
+	&.hide {
+		opacity: 0;
+		visibility: hidden;
+		z-index: -1;
+		pointer-events: none;
+	}
+	&__body {
+		position: relative;
+	}
+	&__percents {
+		font-family: 'Open Sans', sans-serif;
+		font-size: 50px;
+		font-weight: 700;
+		color: #fff;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		z-index: 1000;
+		transform: translate(-50%,-50%);
+	}
+	&__loader {
+		div {
+			border: 24px groove $navyLight;
+			display: table-cell;
+			border-radius: 999px;
+			animation: spin 15s linear infinite;
+			@media (max-width:$mobile){
+				border: 18px groove $navyLight; 
+			}
+		 }
+	}
+}
+
+@keyframes spin {
+	0% { transform: rotate(0deg) }
+	100% { transform: rotate(360deg) }
+}

@@ -18,6 +18,7 @@ import "./files/hide-header-on-scroll.js";
 import "./files/skills-animation.js";
 import "./files/slider.js";
 import "./files/anchorsScroll.js";
-// import "./files/on-scroll-animations.js";
+import "./files/on-scroll-animations.js";
+import "./files/preloader.js";
 
 // /Подключение файлов со своим кодом

@@ -50,7 +50,7 @@
 		flex: 0 0 50%;
 	}
 	&__title {
-		font-family: 'Open Sans';
+		font-family: 'Open Sans', sans-serif;
 		font-size: 30px;
 		font-weight: 700;
 		color: #fff;
@@ -65,7 +65,7 @@
 		}
 	}
 	&__paragraph {
-		font-family: 'Open Sans';
+		font-family: 'Open Sans', sans-serif;
 		font-size: 16px;
 		color: $slate;
 		line-height: 1.4;
@@ -83,7 +83,7 @@
 			}
 		}
 		button {
-			font-family: 'Open Sans';
+			font-family: 'Open Sans', sans-serif;
 			cursor: pointer;
 			color: $green;
 			transition: 0.2s linear;
